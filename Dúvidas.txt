@@ -1,0 +1,26 @@
+Oi Catto, tudo bem?
+Tenho várias dificuldades q talvez tu pudesses me dar uma mão...
+Acho q a página de index (que eu vejo como aquela tela q não deveria mudar, independente da página que eu 
+estiver, certo? Ou?
+As páginas seguem as numerações conforme os menus: Login - pagina1.php, Novo Usuário - pagina2.php...e
+assim sucessivamente.
+
+Aí é q começam os bugs, hahaha.
+- eu não estou conseguindo alinhar os campos (de preenchimento do user)
+- também gostaria de testar as entradas de cada página, p/ saber se estão funcionando. Não sei como fazer.
+No início a minha página um era a página de index, era uma coisa só, e eu não tinha as outros páginas, 
+naquele momento eu consegui testar o "usuário e a senha", agora não consigo testar mais nada, ainda não
+descobri o pq.
+- na página 1 - "Login":  gostaria de fazer o "Esqueceu a senha? e o Junte-se a nós!" abrir uma outra página. Como
+eles fazer parte da pagina1.php, eu ainda não descobri como fazer;
+- página 2 - "Novo Usuário": alinhar formulários e testar as entradas;
+- página 3 - "Adicionar Aluno": idem página 2, + não consigo retirar o aviso de "requer uma nota para o pós-teste."
+- página 4 - "Adicionar Desempenho": não consegui resolver o bug. Basicamente gostaria de salvar algum resultado
+dos testes e dos experimento e iniciá-los com NULL;
+- página 5 - "Materiais": fora as imagens q vou por e os textos, eu queria colocar um botão de download pro
+user baixar a imagem logo acima do botão. E o alinhamento que eu não sei se tá legal;
+- página 6 - "Verificar Desempenho": não faço a mínima idéia de como fazer ela...
+- página 7 - "Sobre nós!": fora o desgin q não sei se está bom, acho q está pronta.
+
+Por enquanto essas são as minhas dificuldades.
+Te agradeço de antemão. Abração.
