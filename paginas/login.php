@@ -1,11 +1,7 @@
 <!-- PÁGINA de LOGIN -->
-
 <!DOCTYPE HTML>  
 <html lang="br">
 	<head>
-		<style>
-			.error {color: #FF0000;}
-		</style>
 		<link rel="stylesheet" href="site.css">
 	</head>
 
