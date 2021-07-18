@@ -11,7 +11,7 @@
 
 	<body>  
 	
-		<?php
+		<?php 
 		// definindo as variáveis e setando como vazias
 			$nameErr = $emailErr = "";
 			$name = $email = "";
@@ -35,21 +35,44 @@
 				$data = stripslashes($data);
 				$data = htmlspecialchars($data);
 				return $data;
-			}
+			} 
 		?>
 	<!-- verificar user com @ -->
 		<p> <h3> <font color="#7887CE">Login</font> </h3><p>
 		<!-- marcação -->
+		<!--
 		<p><span class="error"> </span></p>
-			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+			<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+				<div class="form-group row">
+				<div class="col-sm-10">
 				Usuário: <input type="text" name="name">
-					<span class="error">* <?php echo $nameErr;?></span>
+					<span class="error">* <?php //echo $nameErr;?></span>
+				</div>	
+				</div>	
 				<br>
+				<div class="form-group row">
+				<div class="col-sm-10">
 				Senha: <input type="text" name="email">
-					<span class="error">* <?php echo $emailErr;?></span>
+					<span class="error">* <?php// echo $emailErr;?></span>
+				</div>	
+				</div>	
 				<br><br>
-				<input type="submit" name="submit" value="Entrar">  
-			</form>
+				<input type="submit" name="submit" value="Entrar">  -->
+		<form>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="email1">Email:</label> <br>
+					<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="password1">Senha:</label> <br>
+					<input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+				</div>
+			</div>
+			<br>
+			<button type="submit" class="btn btn-primary">Entrar</button>
+		</form>
+		
 		<hr>
 
 		<?php
@@ -66,7 +89,6 @@
 		<div align="center">
 			<p> <font color="#7887CE">Esqueceu a senha?</font> <p>
 			<p> <font color="#000000">Ainda não possui cadastro?</font> <p>
-			<p> <font color="#7887CE">Junte-se à nós!</font> <p>
 		</div>
 	</body>
 </html>

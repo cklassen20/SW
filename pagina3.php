@@ -72,40 +72,74 @@
 		<p> <h3> <font color="#7887CE">Adicionar Aluno</font> </h3><p>
 
 		<p> <span class="error"> </span> </p>
-			<form method="post" action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>">
+			<!-- <form method="post" action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]);?>">
 				Nome: <input type="text" name="nome">
 					<span class="error">* <?php echo $nomeErr;?> </span>
 				<br>
 				Sobrenome: <input type="text" name="sobrenome">
 					<span class="error">* <?php echo $sobrenomeErr;?></span>
-				<br>
-				Idade: <input type="text" name="idade">
-					<span class="error">* <?php echo $idadeErr;?></span>
+				-->
+				<form>
+				<div class="form-group col-md-6">
+					<label for="name3">Nome:</label> <br>
+					<input type="text" class="form-control" id="name3" placeholder="Nome da criança">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="sobrenome3">Sobrenome:</label> <br>
+					<input type="text" class="form-control" id="sobrenome3" placeholder="Sobrenome">
+				</div>
+				</form>
+				<br> 
+				<form>
+					<div class="form-row align-items-center">
+						<div class="col-auto my-1">
+							<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Sexo:</label>
+							<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+								<option selected>Escolher...</option>
+								<option value="1">Masculino</option>
+								<option value="2">Feminino</option>
+							</select>
+						</div>
+					</div>
+				</form>
 				<br>
 				<form>
-					<p>Selecione o sexo:</p>
-					<input type="radio" id="masc" name="sexo" value="Masculino">
-					<label for="masc">Masculino</label><br>
-					<input type="radio" id="fem" name="sexo" value="Feminino">
-					<label for="fem">Feminino</label>
-					<br><br>
-				</form> 
-				Ano: <input type="text" name="ano">
-					<span class="error">* <?php echo $anoErr;?></span>
+					<div class="form-row align-items-center">
+						<div class="col-auto my-1">
+							<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Idade:</label>
+							<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+								<option selected>Escolher...</option>
+								<option value="1">7</option>
+								<option value="2">8</option>
+								<option value="3">9</option>
+								<option value="4">10</option>
+								<option value="5">11</option>
+								<option value="6">12</option>
+							</select>
+						</div>
+					</div>
+				</form>
 				<br>
-				Pré-teste: <input type="text" name="pretest">
-					<span class="error">* <?php echo $pretestErr;?></span>
+				<form>
+					<div class="form-row align-items-center">
+						<div class="col-auto my-1">
+							<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Ano:</label>
+							<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+								<option selected>Escolher...</option>
+								<option value="1">1º ano</option>
+								<option value="2">2º ano</option>
+								<option value="3">3º ano</option>
+								<option value="4">4º ano</option>
+								<option value="5">5º ano</option>
+								<option value="6">6º ano</option>
+								<option value="7">7º ano</option>
+								<option value="8">8º ano</option>
+							</select>
+						</div>
+					</div>
+				</form>
 				<br>
-				Experimento 1: <input type="text" name="experimento1">
-					<span class="error">* <?php echo $experimento1Err;?></span>
-				<br>
-				Experimento 2: <input type="text" name="esperimento2">
-					<span class="error">* <?php echo $experimento2Err;?></span>
-				<br>
-				Pós-teste: <input type="text" name="postest">
-					<span class="error">* <?php echo $postestErr;?></span>
-				<br><br>
-				<input type="submit" name="submit" value="Cadastrar">
+				<button type="submit" class="btn btn-primary">Adicionar</button>
 			</form>
 
 		<?php
@@ -120,14 +154,6 @@
 			echo "Sexo: $sexo";
 			echo "<br>"; 
 			echo "Ano: $ano";
-			echo "<br>"; 
-			echo "Pré-teste: $pretest";
-			echo "<br>"; 
-			echo "Experimento 1: $experimento1";
-			echo "<br>"; 
-			echo "Experimento 2: $experimento2";
-			echo "<br>"; 
-			echo "Pós-teste: $postest";
 			echo "<br>"; 
 			echo "<br><br><br>";
 		?>
