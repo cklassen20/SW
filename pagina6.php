@@ -2,14 +2,15 @@
 
 <!DOCTYPE HTML>
 <html lang="br">
-<head>
-<style>
-.error {color: #FF0000;}
-</style>
-</head>
+	<head>
+		<style>
+			.error {color: #FF0000;}
+		</style>
+		<link rel="stylesheet" href="site.css">
+	</head>
 
-<body>
-	<p> <h3> <font color="#7887CE">Verificar Resultados</font> </h3><p>
-</body>
+	<body>
+		<span class="titulos">Verificar Resultados</span>
+	</body>
 </html> 
 

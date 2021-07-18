@@ -6,11 +6,12 @@
 		<style>
 			.error {color: #FF0000;}
 		</style>
+		<link rel="stylesheet" href="site.css">
 	</head>
 
 	<body>
 
-		<p> <h3> <font color="#7887CE">Materiais</font> </h3><p>
+		<<span class="titulos">Materiais</span>
 
 		<p> Essa página tem por objetivo instruir o professor sobre a
 		maneira de utilizar os materias disponibilizados pela ferramenta

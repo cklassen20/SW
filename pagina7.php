@@ -2,11 +2,13 @@
 
 <!DOCTYPE HTML>
 <html lang="br">
-	<head>	</head>
+	<head>	
+		<link rel="stylesheet" href="site.css">
+	</head>
 
 	<body>
 
-		<p> <h3> <font color="#7887CE">Sobre Nós! </font> </h3> </p>
+		<span class="titulos">Sobre nós!</span>
 
 		<center>
 			<img src="logoUnipampa2.png" alt="Unipampa/Bagé&copy" style="width:350px;height:142px;">
