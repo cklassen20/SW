@@ -10,6 +10,8 @@
 		header('Location: ./index.php?p=login');
 		die();
 	}
+	session_start();
+	
 ?><!DOCTYPE HTML>  
 <html lang="br">
 	<head>
@@ -31,12 +33,12 @@
 	<table class="menu-superior">
 		<tr>
 			<th><a href="./index.php?p=login">Login</a></th>
-			<th><a href="./index.php?p=pagina2">Novo Usuário</a></th>
-			<th><a href="./index.php?p=pagina3">Adicionar Aluno</a></th>
-			<th><a href="./index.php?p=pagina4">Adicionar Desempenho</a></th>
-			<th><a href="./index.php?p=pagina5">Materiais</a></th>
-			<th><a href="./index.php?p=pagina6">Verificar Resultados</a></th>
-			<th><a href="./index.php?p=pagina7">Sobre Nós!</a></th>
+			<th><a href="./index.php?p=novoUsuario">Novo Usuário</a></th>
+			<th><a href="./index.php?p=adicionarAluno">Adicionar Aluno</a></th>
+			<th><a href="./index.php?p=adicionarDesempenho">Adicionar Desempenho</a></th>
+			<th><a href="./index.php?p=materiais">Materiais</a></th>
+			<th><a href="./index.php?p=verificarResultados">Verificar Resultados</a></th>
+			<th><a href="./index.php?p=sobreNos">Sobre Nós!</a></th>
 		</tr>
 	</table>
 	<hr>
