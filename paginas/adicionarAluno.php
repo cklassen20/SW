@@ -2,6 +2,7 @@
 <span class="titulos">Adicionar Aluno</span>
 
 <form>
+	<br>
 	<div class="form-group col-md-6">
 		<label for="name3">Nome:</label> <br>
 		<input type="text" class="form-control form-control-sm" id="name3" placeholder="Nome da criança">

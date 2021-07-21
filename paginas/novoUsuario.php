@@ -1,6 +1,7 @@
 <!-- PÁGINA de NOVO USUÁRIO -->
 <span class="titulos">Novo Usuário</span>
 <form>
+	<br>
 	<div class="form-row">
 		<div class="form-group col-md-6">
 			<label for="email2">Email:</label> <br>

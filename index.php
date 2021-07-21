@@ -10,9 +10,22 @@
 		header('Location: ./index.php?p=login');
 		die();
 	}
-	session_start();
-	
-?><!DOCTYPE HTML>  
+	/* verificar se a sessão já está aberta, se não estiver, 
+	inicie */
+	if(session_status() !== PHP_SESSION_ACTIVE){
+		//definindo o prazo para a cache expirar - 60 min
+		session_cache_expire(60);
+		session_start();
+	}
+	//obtendo id da sessão iniciada
+	$idSession = session_id();
+	//echo "ID: "; print_r($idSession);
+	//$_SESSION['nome'] = "Nome da sessão";
+	//... $nome; // caso seja uma variável
+	//... $_POST['nome']; // caso seja um formulário
+?>
+
+<!DOCTYPE HTML>  
 <html lang="br">
 	<head>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -28,6 +41,7 @@
 			<h2>SmartWheels: uma ferramenta para estimular o pensamento 
 			computacional em crianças</h2>
 		</center>
+
 	<hr>
 
 	<table class="menu-superior">
