@@ -19,7 +19,7 @@
 	}
 	//obtendo id da sessão iniciada
 	$idSession = session_id();
-	//echo "ID: "; print_r($idSession);
+	echo "ID: "; print_r($idSession);
 	//$_SESSION['nome'] = "Nome da sessão";
 	//... $nome; // caso seja uma variável
 	//... $_POST['nome']; // caso seja um formulário
