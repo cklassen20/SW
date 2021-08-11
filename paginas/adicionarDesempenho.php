@@ -57,3 +57,85 @@
 	 
 	echo "<br><br><br>";
 ?>
+
+<!--  Cálculo da nota do Pré-teste: 10 movimentos mínimos: criar uma função e passar parâmetro? 
+<!-- variáveis nMovPreteste = preTeste? ou usar preTeste
+$nMovPreteste; <!-- n. de movimentos no pré-teste efetuados pela criança 
+$notaFinalPreteste; 
+$fatorPre = 0.2;
+$descNota; <!-- %de err
+$descNotaPre;
+$nMovDescPre
+$nMovIdealPre;
+
+if (nMovPreteste == nMovIdealPre){
+	notaFinalPreteste = 100;	<!-- se a criança realizar 10 movs. ela tirou 10.
+	}
+	else if(noMovPreteste < nMovIdealPre) {
+		notaFinalPreteste = 0; <!-- se a criança não realizar 10 mov. tira 0
+	} else {
+		nMovDescPre = nMovPreteste - nMovIdealPre;
+		descNotaPre = nMovDescPre / fatorPre;
+		notaFinalPresteste = 100 - descNota;
+	}	
+} -->
+
+<!-- Cálculo do Pós-teste: 40 movs. mínimos
+$nMovPosteste // nMovPesteste = posTeste;
+$notaFinalPosteste;
+$nMovDesc;
+$descNotaPos;
+$fatorPos = 2.5;
+$nMovIdealPos = 40;
+
+if (nMovPostes < nMovIdealPos){
+	notaFinalPosteste = 0;
+	}
+	else if (nMovPosteste == nMovIdealPos){
+		notaFinalPosteste = 100;
+		}	
+	} else {
+		nMovDesc = nMovPosteste - nMovIdealPos;
+		descNotaPos = nMovdesc * fatorPos;
+		notaFinalPosteste = 100 - descNotaPos;
+	}
+-->
+
+<!-- Cálculo da atividade 01
+$nMovA1;
+$notaFinalA1;
+$nMovDescA1;
+$descNotaA1;
+$fatorA1 = 10;
+$nMovIdealA1 = 5;
+
+if(nMovA1 < nMovIdealA1){
+	notaFinalA1 = 0;
+	} else if (nMovA1 == nMovIdealA1){
+		notaFinalA1 = 100;
+	} else {
+		nMovDescA1 = nMovA1 - nMovIdealA1;
+		descNotaA1 = nMovDescA1 * fatorA1;
+		notaFinalA1 = 100 - descNotaA1;
+	}
+ -->
+ 
+ <!-- 
+ !-- Cálculo da atividade 02
+$nMovA2;
+$notaFinalA2;
+$nMovDescA2;
+$descNotaA2;
+$fatorA2 = 3.5715;
+$nMovIdealA2 = 14;
+
+if(nMovA2 < nMovIdealA2){
+	notaFinalA2 = 0;
+	} else if (nMovA2 == nMovIdealA2){
+		notaFinalA2 = 100;
+	} else {
+		nMovDescA2 = nMovA2 - nMovIdealA2;
+		descNotaA2 = nMovDescA2 * fatorA2;
+		notaFinalA2 = 100 - descNotaA2;
+	}
+ --> 

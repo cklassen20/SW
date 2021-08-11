@@ -1,0 +1,24 @@
+PÁGINA DE MANUAL DE INSTRUÇÕES
+
+RESUMOS
+PROBLEMA DA PESQUISA
+OBJETIVO GERAL
+OBJETIVOS ESPECÍFICOS
+
+explicar conceitos os conceitos de 
+algoritmos, decomposição, reconhecimento de padrões e abstração, pilares do
+	Pensamento Computacional
+	
+PLANO DE TESTES
+
+Mini-aula de apresentação do PC e dos seus pilares.
+
+PC - capacidade que uma pessoa possui de resolver problemas (Wing),isso
+pode realizado através de 4 pilares:
+- Decomposição: Dividir um problema difícil em problemas menores e mais
+fáceis de resolver. Ex.: 
+- Reconhecimento de padrões: descobrir repetições em acontecimentos/ações.
+Uma solução já descoberta pode ser usada para resolver outro problema.
+- Abstração:  separar o que muito importante do que não é. Ex.: motor 
+de um carro, som do carro.
+- algoritmo: conjunto de regras para a solução de um problema.

@@ -1,10 +1,18 @@
 <?php
-	$pagina = $_GET['p'];
+	$pagina = isset($_GET['p']) ? $_GET['p'] : null;
+	$errors = [];
 	if($pagina == null) {
 		$pagina = 'login';
 	}
 	
-	$pagina = '.' . DIRECTORY_SEPARATOR . 'paginas' . DIRECTORY_SEPARATOR . $pagina . '.php';
+	include('.' . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'idiorm.php');
+	ORM::configure('mysql:host=localhost;dbname=SmartWheels');
+	ORM::configure('username', 'root');
+	//ORM::configure('password', 'root');
+	
+	$diretorio = '.' . DIRECTORY_SEPARATOR . 'paginas' . DIRECTORY_SEPARATOR;
+	$pagina_pre = $diretorio . $pagina . '.pre.php';
+	$pagina = $diretorio . $pagina . '.php';
 	
 	if(!file_exists($pagina)) {
 		header('Location: ./index.php?p=login');
@@ -17,9 +25,14 @@
 		session_cache_expire(60);
 		session_start();
 	}
+	
+	if(file_exists($pagina_pre)) {
+		require_once $pagina_pre;
+	}
+	
 	//obtendo id da sessão iniciada
-	$idSession = session_id();
-	echo "ID: "; print_r($idSession);
+	//$idSession = session_id();
+	//echo "ID: "; print_r($idSession);
 	//$_SESSION['nome'] = "Nome da sessão";
 	//... $nome; // caso seja uma variável
 	//... $_POST['nome']; // caso seja um formulário
@@ -46,8 +59,15 @@
 
 	<table class="menu-superior">
 		<tr>
-			<th><a href="./index.php?p=login">Login</a></th>
-			<th><a href="./index.php?p=novoUsuario">Novo Usuário</a></th>
+			<?php
+				if(!isset($_SESSION['usuario'])) {
+					echo '<th><a href="./index.php?p=login">Login</a></th>';
+					echo '<th><a href="./index.php?p=novoUsuario">Novo Usuário</a></th>';
+				} else {
+					echo '<th><a href="./index.php?p=login&logout">Sair</a></th>';
+					echo '<th>' . $_SESSION['usuario'] . '</th>';
+				}
+			?>
 			<th><a href="./index.php?p=adicionarAluno">Adicionar Aluno</a></th>
 			<th><a href="./index.php?p=adicionarDesempenho">Adicionar Desempenho</a></th>
 			<th><a href="./index.php?p=materiais">Materiais</a></th>
@@ -58,6 +78,8 @@
 	<hr>
 
 	<?php
+		foreach($errors as $erro)
+			echo '<p>' . $erro . '</p>';
 		require_once $pagina;
 	?>
 	</body>

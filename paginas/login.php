@@ -1,14 +1,14 @@
 <span class="titulos">Login</span>
 <br>
-<form>
+<form method="POST">
 	<div class="form-row">
 		<div class="form-group col-md-6">
-			<label for="email1">Email:</label> <br>
-			<input type="email" class="form-control form-control-sm" id="ema" placeholder="Email">
+			<label for="usuario">Email:</label> <br>
+			<input type="email" name="usuario" class="form-control form-control-sm" id="ema" placeholder="Email">
 		</div>
 		<div class="form-group col-md-6">
-			<label for="pass1">Senha:</label> <br>
-			<input type="password" class="form-control form-control-sm" id="pass1" placeholder="Senha">
+			<label for="pass">Senha:</label> <br>
+			<input type="password" name="pass" class="form-control form-control-sm" id="pass1" placeholder="Senha">
 		</div>
 	</div>
 	<br>
