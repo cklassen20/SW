@@ -47,7 +47,7 @@
 	//... $_POST['nome']; // caso seja um formulário
 	
 	function is_logado() {
-		return isset($_SESSION['usuario']);
+		return isset($_SESSION['idusuario']);
 	}
 ?>
 

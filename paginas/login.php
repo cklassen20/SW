@@ -16,16 +16,6 @@
 </form>
 <hr>
 
-<?php
-	echo "<h3>Print das Entradas:</h3>";
-	echo "<br>";
-	echo "Nome: ";
-	echo "<br><br>";
-	echo "E-mail: ";
-	echo "<br>";
-?>
-<hr>
-
 <div align="center">
 	<p> <font color="#7887CE">Esqueceu a senha?</font> <p>
 	<a href="./index.php?p=novoUsuario">Ainda não possui cadastro?</a>

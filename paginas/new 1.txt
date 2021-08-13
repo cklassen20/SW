@@ -18,3 +18,15 @@ user bd:
 1.
 mar@gmail.com
 solemar
+2.
+cris@gmail.com
+clone
+
+IMGs para Overleaf - editar + prog. + manual de instruções reescrever
+- 3x3RespostaKoudlar
+- 5x5Respostakodular
+- telaLogin
+- telaMov
+- telaAbourUs
+- telaEsqueceu
+- telaCadastrar
