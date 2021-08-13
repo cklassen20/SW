@@ -1,14 +1,3 @@
-PÁGINA DE MANUAL DE INSTRUÇÕES
-
-RESUMOS
-PROBLEMA DA PESQUISA
-OBJETIVO GERAL
-OBJETIVOS ESPECÍFICOS
-
-explicar conceitos os conceitos de 
-algoritmos, decomposição, reconhecimento de padrões e abstração, pilares do
-	Pensamento Computacional
-	
 PLANO DE TESTES
 
 Mini-aula de apresentação do PC e dos seus pilares.
@@ -24,3 +13,8 @@ de um carro, som do carro.
 - algoritmo: conjunto de regras para a solução de um problema.
 
 Add movs por aluno, buscar a posição do aluno
+
+user bd:
+1.
+mar@gmail.com
+solemar
