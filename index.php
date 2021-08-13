@@ -1,8 +1,8 @@
 <?php
-	$pagina = isset($_GET['p']) ? $_GET['p'] : null;
+	$nomepagina = isset($_GET['p']) ? $_GET['p'] : null;
 	$errors = [];
-	if($pagina == null) {
-		$pagina = 'login';
+	if($nomepagina == null) {
+		$nomepagina = 'login';
 	}
 	
 	include('.' . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'idiorm.php');
@@ -11,8 +11,8 @@
 	//ORM::configure('password', 'root');
 	
 	$diretorio = '.' . DIRECTORY_SEPARATOR . 'paginas' . DIRECTORY_SEPARATOR;
-	$pagina_pre = $diretorio . $pagina . '.pre.php';
-	$pagina = $diretorio . $pagina . '.php';
+	$pagina_pre = $diretorio . $nomepagina . '.pre.php';
+	$pagina = $diretorio . $nomepagina . '.php';
 	
 	if(!file_exists($pagina)) {
 		header('Location: ./index.php?p=login');
@@ -30,12 +30,25 @@
 		require_once $pagina_pre;
 	}
 	
+	// validar páginas que não precisam estar logado
+	if(!is_logado()) {
+		$paginas_publicas = ['login', 'novoUsuario', 'materiais', 'sobreNos'];
+		if(array_search($nomepagina, $paginas_publicas) === false) {
+			header('Location: ./index.php?p=login');
+			die();
+		}
+	}
+	
 	//obtendo id da sessão iniciada
 	//$idSession = session_id();
 	//echo "ID: "; print_r($idSession);
 	//$_SESSION['nome'] = "Nome da sessão";
 	//... $nome; // caso seja uma variável
 	//... $_POST['nome']; // caso seja um formulário
+	
+	function is_logado() {
+		return isset($_SESSION['usuario']);
+	}
 ?>
 
 <!DOCTYPE HTML>  
@@ -60,18 +73,22 @@
 	<table class="menu-superior">
 		<tr>
 			<?php
-				if(!isset($_SESSION['usuario'])) {
+				if(!is_logado()) {
 					echo '<th><a href="./index.php?p=login">Login</a></th>';
 					echo '<th><a href="./index.php?p=novoUsuario">Novo Usuário</a></th>';
 				} else {
 					echo '<th><a href="./index.php?p=login&logout">Sair</a></th>';
 					echo '<th>' . $_SESSION['usuario'] . '</th>';
+					echo '<th><a href="./index.php?p=adicionarAluno">Adicionar Aluno</a></th>';
+					echo '<th><a href="./index.php?p=adicionarDesempenho">Adicionar Desempenho</a></th>';
 				}
 			?>
-			<th><a href="./index.php?p=adicionarAluno">Adicionar Aluno</a></th>
-			<th><a href="./index.php?p=adicionarDesempenho">Adicionar Desempenho</a></th>
+			
 			<th><a href="./index.php?p=materiais">Materiais</a></th>
-			<th><a href="./index.php?p=verificarResultados">Verificar Resultados</a></th>
+			<?php
+				if(is_logado())
+					echo '<th><a href="./index.php?p=verificarResultados">Verificar Resultados</a></th>'
+			?>
 			<th><a href="./index.php?p=sobreNos">Sobre Nós!</a></th>
 		</tr>
 	</table>

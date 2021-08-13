@@ -22,3 +22,5 @@ Uma solução já descoberta pode ser usada para resolver outro problema.
 - Abstração:  separar o que muito importante do que não é. Ex.: motor 
 de um carro, som do carro.
 - algoritmo: conjunto de regras para a solução de um problema.
+
+Add movs por aluno, buscar a posição do aluno
